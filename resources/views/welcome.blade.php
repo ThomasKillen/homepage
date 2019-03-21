@@ -10,6 +10,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <style>
+
+            body {
+                background-color: #1d2124;
+            }
         </style>
     </head>
     <body>
