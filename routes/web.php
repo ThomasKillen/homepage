@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'Product@home');
-Route::get('/{product?}', 'Product@update');
+Route::get('/{product?}', 'Product@show');

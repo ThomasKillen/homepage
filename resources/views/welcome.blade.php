@@ -152,58 +152,22 @@
     </div>
     <a class="homepage_cta" href="#homepage_products" >Get Started</a>
 </div>
-
         <h2 id="homepage_products" class="homepage_sub_header"> Whether your looking to invest or secure a future for your family, we offer a bespoke package that is tailored to your requirements. Take a look at our market leading products below:  </h2>
         <div class="homepage_projects">
-
+<?php foreach ($products as $product) : ?>
             <div class="project_flex">
                 <div class="pension_bckgrnd">
                 </div>
                 <div class="project_header">
-                    <span>Pensions</span>
+                    <span><?= ucfirst($product->name) ?></span>
                 </div>
                 <div class="project_text">
-                    <p>A long-term and tax-efficient way to save for the future during your working life.</p>
+                    <p><?= $product->short_details ?></p>
                 </div>
                 <div class="project_cta"><a class="cta_font" href="/pensions"> More Info
                 </a></div>
             </div>
-            <div class="project_flex">
-                <div class="insurance_bckgrnd">
-                </div>
-                <div class="project_header">
-                    <span>Insurance</span>
-                </div>
-                <div class="project_text">
-                    <p>If you need property, life, health, income, pets, business and travel insurance, we’re your go-to.</p>
-                </div>
-                <div class="project_cta"><a class="cta_font" href="/insurance"> More Info
-                    </a></div>
-            </div>
-            <div class="project_flex">
-                <div class="credit_bckgrnd">
-                </div>
-                <div class="project_header">
-                    <span>Credit</span>
-                </div>
-                <div class="project_text">
-                    <p>From day one, our business has been about helping people succeed with credit.</p>
-                </div>
-                <div class="project_cta"><a class="cta_font" href="/credit"> More Info
-                    </a></div>
-            </div>
-            <div class="project_flex">
-                <div class="savings_bckgrnd">
-                </div>
-                <div class="project_header">
-                    <span>Savings</span>
-                </div>
-                <div class="project_text">
-                    <p>Lots of clever ways to save a lot, by doing very little</p>
-                </div>
-                <div class="project_cta"><a class="cta_font" href="/savings"> More Info
-                    </a></div>
-            </div>
+<?php endforeach; ?>
     </div>
     </body>
 </html>

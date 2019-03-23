@@ -15,15 +15,22 @@ class Product extends BaseController
 
     public function home()
     {
-        return view('/welcome');
+        $result = DB::table('products')
+            ->get();
+        return view('/welcome')->with('products', $result);
     }
 
-    public function update($product)
+    public function show($product)
     {
-        $users = DB::table('products')
+        $result = DB::table('products')
         ->where ('name', [$product])
         ->get();
-        return view('/product')->with('product', $users);
+        if($result->isEmpty()){
+            return redirect('/');
+        }
+        else {
+            return view('/product')->with('product', $result);
+        }
     }
 
 }
