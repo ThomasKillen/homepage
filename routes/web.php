@@ -11,8 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/{product?}', 'Product@product')->product('product');
+Route::get('/', 'Product@home');
+Route::get('/{product?}', 'Product@update');
