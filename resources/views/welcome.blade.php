@@ -116,6 +116,23 @@
                 text-decoration: none;
             }
 
+            @media (max-width: 650px)
+            {
+                .homepage_h1
+                {
+                    width:100%;
+                    font-size: 2.75em;
+                }
+            }
+
+            @media (max-width: 1208px)
+            {
+                .project_flex
+                {
+                    margin-bottom: 50px;
+                }
+            }
+
         </style>
     </head>
     <body>
