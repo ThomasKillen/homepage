@@ -73,36 +73,9 @@
                 justify-content: space-evenly;
             }
 
-            .credit_bckgrnd {
+            .product_div {
                 width: 300px;
                 height: 300px;
-                background: url(images/credit.jpg);
-                background-position: center;
-                background-size: cover;
-            }
-
-            .insurance_bckgrnd {
-                width: 300px;
-                height: 300px;
-                background: url(images/insurance.jpg);
-                background-position: center;
-                background-size: cover;
-            }
-
-            .pension_bckgrnd {
-                width: 300px;
-                height: 300px;
-                background: url(images/pension.jpg);
-                background-position: center;
-                background-size: cover;
-            }
-
-            .savings_bckgrnd {
-                width: 300px;
-                height: 300px;
-                background: url(images/savings.jpg);
-                background-position: center;
-                background-size: cover;
             }
 
             .project_header {
@@ -156,7 +129,9 @@
         <div class="homepage_projects">
 <?php foreach ($products as $product) : ?>
             <div class="project_flex">
-                <div class="pension_bckgrnd">
+                <div class="product_div" style="background: url(images/<?= $product->name ?>.jpg);
+                background-position: center;
+                background-size: cover;">
                 </div>
                 <div class="project_header">
                     <span><?= ucfirst($product->name) ?></span>
@@ -164,10 +139,11 @@
                 <div class="project_text">
                     <p><?= $product->short_details ?></p>
                 </div>
-                <div class="project_cta"><a class="cta_font" href="/pensions"> More Info
+                <div class="project_cta"><a class="cta_font" href="/<?= $product->name ?>"> More Info
                 </a></div>
             </div>
 <?php endforeach; ?>
     </div>
     </body>
 </html>
+
